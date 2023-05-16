@@ -19,5 +19,5 @@ var romanToInt = function(s) {
     return roman[s]
 }
 
-console.log(romanToInt('C'))
+console.log(romanToInt("M"))
 
