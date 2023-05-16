@@ -16,7 +16,10 @@ var roman = {
 }
 
 var romanToInt = function(s) {
-    return roman[s]
+    for(let i in roman) {
+        console.log(roman[i])
+    }
+    
 }
 
 console.log(romanToInt("M"))
