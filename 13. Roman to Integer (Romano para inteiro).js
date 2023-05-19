@@ -16,11 +16,17 @@ var roman = {
 }
 
 var romanToInt = function(s) {
-    for(let i in roman) {
-        console.log(roman[i])
+    let tam = s.length
+    for(let i = 0; i < tam; i++) {     //Percorre todos os caracteres de s.
+        console.log(s.charAt(i))
     }
-    
+
+    for(let i in roman) {
+        let num = roman[i]
+        num++
+    }
+    return num
 }
 
-console.log(romanToInt("M"))
+console.log(romanToInt("ILV"))
 
