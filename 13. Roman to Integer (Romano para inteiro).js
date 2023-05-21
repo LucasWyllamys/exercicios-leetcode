@@ -5,28 +5,40 @@
  * @return {number}
  */
 
-var roman = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000
+const roman = {
+    I:  1,
+    IV: 4,
+    V:  5,
+    IX: 9,
+    X:  10,
+    XL: 40,
+    L:  50,
+    XC: 90,
+    C:  100,
+    CD: 400,
+    D:  500,
+    CM: 900,
+    M:  1000,  
 }
 
 var romanToInt = function(s) {
     let tam = s.length
-    for(let i = 0; i < tam; i++) {     //Percorre todos os caracteres de s.
-        console.log(s.charAt(i))
-    }
-
-    for(let i in roman) {
-        let num = roman[i]
-        num++
+    let num = 0
+    if(tam == 1) {
+        return roman[s]        
+    } else {
+        for(let i = 0; i < tam; i++) {
+            let char = s.charAt(i)
+            let char2 = s.charAt(i+1) != '' ? s.charAt(i)+s.charAt(i+1) : false
+            if(char2 in roman) {  //Retorna true se a propriedade existir e false caso contrário.
+                num += roman[char2]
+                i++
+            } else {
+                num += roman[char]
+            }
+        }
     }
     return num
 }
 
-console.log(romanToInt("ILV"))
-
+console.log(romanToInt('MCMXCIV'))
