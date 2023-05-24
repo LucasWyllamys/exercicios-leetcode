@@ -1,1 +1,0 @@
-//Link da questão no LeetCode: https://leetcode.com/problems/longest-common-prefix/
