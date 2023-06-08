@@ -5,25 +5,25 @@
  * @return {string}
  */
 
-var strs = ["flower","flow","flight"]
+var vetor = ["flower","flow","flight"]
 
 var longestCommonPrefix = function(strs) {
-    if(strs.length === 0) {
+    if(strs.length == 0) {
         return ""
     }
 
     let prefixo = strs[0]
 
-    for(let i = 1; i < strs.length; i++) { //Percorre os elementos do vetor.
-        while(strs[i].indexOf(prefixo) !== 0) {
-            prefixo = prefixo.substring(0, prefixo.length - 1)
-            if(prefixo ==="") {
-                return ""
+    for(let i = 1; i < strs.length; i++) {     //Percorre todos os elementos/strings do vetor strs. 
+        while(strs[i].indexOf(prefixo) !== 0) {     //Se retornar 0 é porque o prefixo foi encontrado em strs[i].
+            prefixo = prefixo.substring(0, prefixo.length - 1)      //Retira o último caractere de prefixo.
+            if(prefixo == "") {
+                return prefixo
             }
         }
     }
 
     return prefixo
-}
+};
 
-console.log(longestCommonPrefix(strs))
+console.log(longestCommonPrefix(vetor))
