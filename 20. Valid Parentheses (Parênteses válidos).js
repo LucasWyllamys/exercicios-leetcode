@@ -24,7 +24,15 @@ var isValid = function(s) {
     for(let i = 0; i <= s.length; i++) {
         if(s[i] == '(') {
             vet.push(')')
+        } else if(s[i] =='[') {
+            vet.push(']')
+        } else if(s[i] == '{') {
+            vet.push('}')
         }
+    }
+    
+    for(i = 0; i <= s.length; i += 2) {
+
     }
 }
 
