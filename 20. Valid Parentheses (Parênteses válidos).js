@@ -12,6 +12,9 @@ Example 3:
 
 Input: s = "(]"
 Output: false
+
+Input: s = "{[]}"
+Output: true
 */
 
 /**
@@ -21,20 +24,11 @@ Output: false
 
 var isValid = function(s) {
     let vet = []
-    for(let i = 0; i <= s.length; i++) {
-        if(s[i] == '(') {
-            vet.push(')')
-        } else if(s[i] =='[') {
-            vet.push(']')
-        } else if(s[i] == '{') {
-            vet.push('}')
-        }
-    }
-    
-    for(i = 0; i <= s.length; i += 2) {
-
+    let tot = s.length
+    for(let i = 0; i < tot; i++) {
+       
     }
 }
 
-console.log(isValid("()[]{}"))
+console.log(isValid("{[]}"))
 
